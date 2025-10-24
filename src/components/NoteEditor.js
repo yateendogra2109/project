@@ -56,7 +56,7 @@ const NoteEditor = ({
     };
 
     if (note) {
-      onUpdate(note.id, noteData);
+      onUpdate(note._id, noteData);
     } else {
       onSave(noteData.title, noteData.content, noteData.category, noteData.reminder);
     }

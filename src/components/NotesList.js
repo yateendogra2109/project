@@ -70,8 +70,8 @@ const NotesList = ({ notes, selectedNote, onNoteSelect, onDeleteNote, viewMode }
       <div className="notes-container">
         {notes.map(note => (
           <div
-            key={note.id}
-            className={`note-card ${selectedNote?.id === note.id ? 'selected' : ''}`}
+            key={note._id}
+            className={`note-card ${selectedNote?._id === note._id ? 'selected' : ''}`}
             onClick={() => onNoteSelect(note)}
           >
             <div className="note-header">
@@ -97,7 +97,7 @@ const NotesList = ({ notes, selectedNote, onNoteSelect, onDeleteNote, viewMode }
                   className="delete-btn"
                   onClick={(e) => {
                     e.stopPropagation();
-                    onDeleteNote(note.id);
+                    onDeleteNote(note._id);
                   }}
                   title="Delete note"
                 >

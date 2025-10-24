@@ -103,7 +103,7 @@ const RecentNotes = ({ notes, onNoteSelect }) => {
             <div className="notes-timeline">
               {groupNotes.map(note => (
                 <div
-                  key={note.id}
+                  key={note._id}
                   className="timeline-item"
                   onClick={() => onNoteSelect(note)}
                 >

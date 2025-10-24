@@ -24,6 +24,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/notesapp'
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/notes', require('./routes/notes'));
+app.use('/api/categories', require('./routes/categories'));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
